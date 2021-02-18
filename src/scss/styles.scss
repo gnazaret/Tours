@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
@@ -19,7 +20,8 @@ h1 {
   font-size: 85px;
 }
 h2 {
-  font-style: 'Kaushan';
+  font-family: 'Shrikhand';
+  font-size: 15px;
 
 }
 p {
@@ -68,6 +70,10 @@ body {
 
   padding: 50px;
 
+
+}
+.grid2 {
+  padding: 5px;
 
 }
 .grid div img {
@@ -151,6 +157,34 @@ body {
   border-radius: 10px;
   font-family: inherit;
   cursor: pointer;
+}
+.planner {
+
+  display: flex;
+  flex-direction: row;
+  float: left;
+  justify-content: space-between;
+  background-color: transparent;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+ 
+
+}
+.buttonPlanner {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+.buttonPlanner:hover {
+  background-color: rgb(138, 23, 94);
+
 }
 
 

@@ -8,6 +8,8 @@ import Destinations from './Destinations';
 import SignUp from './Signup';
 import Planner from './Planner';
 import Places from './Places';
+import UpdateDelete from './UpdateDelete';
+import Showplace from './Showplace';
 
 export default function App() {
 	const [query, updateQuery] = useState({
@@ -84,15 +86,21 @@ export default function App() {
 					</div>
 				</div>
 			</Route>
+
 			<Route path="/planner">
 				<Planner />
 			</Route>
 			<Route path="/login">
 				<Login />
 			</Route>
-
 			<Route path="/signup">
 				<SignUp />
+			</Route>
+			<Route path="/updatedelete">
+				<UpdateDelete />
+			</Route>
+			<Route path="/showplace">
+				<Showplace />
 			</Route>
 			<Destinations />
 

@@ -1,3 +1,4 @@
+const { json } = require('express');
 const express = require('express');
 const placeRouter = express.Router();
 const Place = require('../models/place');
@@ -5,7 +6,7 @@ const Place = require('../models/place');
 //INDUCES
 
 //CREATE
-placeRouter.post('/planner', async (req, res) => {
+placeRouter.post('/', async (req, res) => {
     try{
         const newPlace = await Place.create(req.body);
         res
@@ -20,7 +21,7 @@ placeRouter.post('/planner', async (req, res) => {
 }) 
 
 //READ
-placeRouter.get('/planner', async (req, res) => {
+placeRouter.get('/', async (req, res) => {
     try{
         const foundPlace = await Place.find({})
         res
@@ -35,5 +36,56 @@ placeRouter.get('/planner', async (req, res) => {
     }
 
 })
+
+//SHOW
+placeRouter.get('/:id', async (req, res) => {
+    try {
+        const foundPlace = await Place.findById(req.params.id)
+        res
+        .status(200)
+        .json(foundPlace)
+
+    } catch(error){
+        res
+        .status(400)
+        .json(error)
+
+    }
+
+})
+
+//DELETE
+
+placeRouter.delete('/:id', async (req, res) => {
+    try {
+        const foundPlace = await Place.findByIdAndDelete(req.params.id)
+        res
+        .status(200)
+        .json(foundPlace)
+
+    } catch(error) {
+        res
+        .status(400)
+        .json(error)
+
+    }
+
+})
+
+//UPDATE
+placeRouter.put('/:id', async (red, res) => {
+   try {
+    const foundPlace = await Place.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res
+    .status(200)
+    .json(foundPlace)
+   } catch(error){
+       res
+       .status(400)
+       json(error)
+
+   }
+})
+
 
 module.exports = placeRouter;

@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
-const placeRouter = require('./controllers/Places');
+const placeRouter = require('./controllers/places');
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/fruits_api';
 const db = mongoose.connection;
