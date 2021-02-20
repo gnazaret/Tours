@@ -25,7 +25,7 @@ const Planner = props => {
 			{places.map(place => {
 				return (
 					<div className="planner" key={place._id}>
-						<Link to={`/${place._id}`}>
+						<Link to={`/place/${place._id}`}>
 							<button className="buttonPlanner">{place.name}</button>
 						</Link>
 						<h2>{place.country}</h2>

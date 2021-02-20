@@ -21,7 +21,7 @@ h1 {
 }
 h2 {
   font-family: 'Shrikhand';
-  font-size: 15px;
+  font-size: 25px;
 
 }
 p {
@@ -173,6 +173,7 @@ body {
 }
 .buttonPlanner {
   background-color: transparent;
+  font-size: 30px;
   color: white;
   padding: 10px;
   border: none;
@@ -185,6 +186,31 @@ body {
 .buttonPlanner:hover {
   background-color: rgb(138, 23, 94);
 
+}
+.buttonDelete {
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+.buttonDelete:hover {
+  background-color: rgb(105, 102, 103);
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  
 }
 
 

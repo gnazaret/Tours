@@ -10,7 +10,6 @@ import Planner from './Planner';
 import Places from './Places';
 import UpdateDelete from './UpdateDelete';
 import Showplace from './Showplace';
-
 export default function App() {
 	const [query, updateQuery] = useState({
 		baseURL: 'http://api.opentripmap.com/0.1/en/places/geoname?name=',
@@ -99,9 +98,8 @@ export default function App() {
 			<Route path="/updatedelete">
 				<UpdateDelete />
 			</Route>
-			<Route path="/showplace">
-				<Showplace />
-			</Route>
+			<Route path="/place/:id" component={Showplace} />
+
 			<Destinations />
 
 			<Footer />

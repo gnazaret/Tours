@@ -36,7 +36,7 @@ export default function Places(props) {
 	// 		}
 	// 	})();
 	// }, [query]);
-
+	const [input, resetInput] = useState(10);
 	const handleClick = async (newPlace, e) => {
 		e.preventDefault();
 		const body = JSON.stringify({
